@@ -1,18 +1,3 @@
 # Default ignored files
 /shelf/
 /workspace.xml
-
-# IntelliJ files
-/.idea
-*.iml
-
-# Mac system files
-.DS_Store
-
-# Java build files
-/target
-*.class
-
-# Log files
-*.log
-
