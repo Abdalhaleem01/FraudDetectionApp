@@ -31,23 +31,23 @@ public class FraudController {
     }
 
     @PostMapping("transaction")
-    public String doTransaction(@RequestBody TransactionModel transaction) {
+    public TransactionModel doTransaction(@RequestBody TransactionModel transaction) {
         transactionService.addTransaction(transaction);
 
-        return "Success";
+        return transaction;
     }
 
     @PutMapping("transaction")
-    public String updateTransaction(@RequestBody TransactionModel transaction) {
+    public TransactionModel updateTransaction(@RequestBody TransactionModel transaction) {
         transactionService.updateTransaction(transaction);
-        return "Success";
+        return transaction;
     }
 
     @DeleteMapping("transaction/{transactionID}")
     public String deleteTransaction(@PathVariable("transactionID") String transactionID){
 
         transactionService.deleteTransaction(transactionID);
-        return  "Success";
+        return  "The transaction has been deleted successfully";
     }
 
 }
